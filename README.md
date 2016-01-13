@@ -20,6 +20,6 @@ Hope it turns out really well
 *   Users: log in to add to cart, log out, post products, add , delete, edit, products {for admin only)
 *   will try to add star rating again.. (hopefully works this time)
 
-##todo
+#Todo
 
 * limit character count in index description

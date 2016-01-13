@@ -1,15 +1,17 @@
 <html class="body">
   <h1>Welcome to the Cat store</h1>
-
-  <% @products.each do |product| %>
-  <br>
-  <div class="product_wrapper">
-    <h2 class="title"><%= link_to product.title, product %> </h2>
-    <p class="description"><%= truncate product.description, length: 160  %></p> <!--  This cuts the maximum characters allowed in description to 160 -->
-    <p class="price">$<%= product.price %></p>
-    <%= link_to 'Show', product %>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-  <%end%>
+    <div id="container">
+      <% @products.each do |product| %>
+        <br>
+          <div class="product_wrapper">
+            <h2 class="title"><%= link_to product.title, product %> </h2>
+            <p class="description"><%= truncate product.description, length: 160  %></p> <!--  This cuts the maximum characters allowed in description to 160 -->
+            <p class="price">$<%= product.price %></p>
+              <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_product_path(product) %> |
+            <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%end %>
+          </div>
+      <%end%>
+    </div>
 </html>

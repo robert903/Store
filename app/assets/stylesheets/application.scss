@@ -10,20 +10,40 @@ h1{
   text-align: center;
 }
 .body{
-  padding-top: 70px;
+  // padding-top: 70px;
+}
+// .form-group{
+//   width:100%;
+//   display: flex;
+//   align-items: center;
+// }
+// .form-control{
+//   width:auto;
+//   align-items: center;
+// }
+
+#container{
+
+  padding-top: 10px;
+  margin: auto;
+  width: 100%;
+  background-color: blue;
+  display: flex; // flexbox learn more
+  align-items: center; // vertically and horizontally alighs each
+  flex-wrap: wrap; //makes them responsive
 }
 
 .product_wrapper{
     width: 250px;
-    margin-left:0px;
+    margin: 10px;
+    height: auto;
     border-radius: 5px;
     text-align: center;
     background-color: #f3f3f3;
-    -moz-box-shadow: 0 0 6px 2px #b0b2ab;
-    -webkit-box-shadow: 0 0 6px 2px #b0b2ab;
     box-shadow: 0 0 6px 2px #b0b2ab;
-    font-family: sans-serif;
-    list-style: none;
+    padding-bottom: 3px;
+
+
 }
 .price{
   color: red;
