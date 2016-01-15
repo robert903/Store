@@ -4,7 +4,5 @@ class UsersController < ApplicationController
   end
 
 
-  def sign_out
-    devise_sessions_destroy
-  end
+
 end
