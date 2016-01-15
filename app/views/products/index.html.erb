@@ -3,7 +3,8 @@
     <div id="container">
       <% @products.each do |product| %>
         <br>
-          <div class="product_wrapper">
+          <div class="product_wrapper"
+            <p class="image"> <%=image_tag product.image.url(:medium) %> </p>
             <h2 class="title"><%= link_to product.title, product %> </h2>
             <p class="description"><%= truncate product.description, length: 160  %></p> <!--  This cuts the maximum characters allowed in description to 160 -->
             <p class="price">$<%= product.price %></p>

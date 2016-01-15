@@ -1,3 +1,4 @@
+<div class="edit">
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +11,10 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -29,3 +34,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>

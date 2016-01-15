@@ -1,15 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @font-face {
-  font-family: sans-serif;
-  src: url(/assets/Brandon_bld.otf);
+  font-family: "brandon-grotesque";
+  src: url(/assets/brandon.otf) format("truetype");
 }
 
+.navbar{
+      font-family: "brandon-grotesque";
+}
 h1{
   color: #137696;
   text-align: center;
+  font-family: "brandon-grotesque";
 }
 .body{
+    font-family: "brandon-grotesque";
   // padding-top: 70px;
 }
 // .form-group{
@@ -23,18 +28,26 @@ h1{
 // }
 
 #container{
-
+  font-family: "brandon-grotesque";
   padding-top: 10px;
   margin: auto;
   width: 100%;
-  background-color: blue;
+  // background-color: blue;
   display: flex; // flexbox learn more
   align-items: center; // vertically and horizontally alighs each
   flex-wrap: wrap; //makes them responsive
 }
 
+.show{
+    font-family: "brandon-grotesque";
+}
+.edit{
+    font-family: "brandon-grotesque";
+}
+
 .product_wrapper{
-    width: 250px;
+    font-family: "brandon-grotesque";
+    width: 300px;
     margin: 10px;
     height: auto;
     border-radius: 5px;
@@ -42,16 +55,22 @@ h1{
     background-color: #f3f3f3;
     box-shadow: 0 0 6px 2px #b0b2ab;
     padding-bottom: 3px;
+}
 
+
+.image{
+  border-radius: 5px;
 
 }
+
 .price{
   color: red;
+    font-family: "brandon-grotesque";
 }
 
 .title{
+    font-family: "brandon-grotesque";
   text-transform: uppercase;
-  font-family: sans-serif;
   font-weight: bold;
 
 }
