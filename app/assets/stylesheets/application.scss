@@ -1,3 +1,6 @@
+/*
+*= require 'masonry/transitions'
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @font-face {
@@ -5,84 +8,74 @@
   src: url(/assets/brandon.otf) format("truetype");
 }
 
+.glyphicon-heart{
+  color: red;
+}
+
 .navbar{
       font-family: "brandon-grotesque";
 }
-h1{
-  color: #137696;
-  text-align: center;
-  font-family: "brandon-grotesque";
-}
-.body{
+.body {
     font-family: "brandon-grotesque";
-  // padding-top: 70px;
+    background-color: #E9E9E9;
 }
-// .form-group{
-//   width:100%;
-//   display: flex;
-//   align-items: center;
-// }
-// .form-control{
-//   width:auto;
-//   align-items: center;
-// }
+  h1{
+    // color: #137696;
+    text-align: center;
+    font-family: "brandon-grotesque";
+  }
+    .box {
+      font-family: "brandon-grotesque";
+      margin: 0 auto;
+      width: 100%;
+      display: flex; // flexbox learn more
+      align-items: center; // vertically and horizontally alighs each
+      flex-wrap: wrap; //makes them responsive
+      background-color: #E9E9E9;
+    }
+      .product_wrapper{
+          font-family: "brandon-grotesque";
+          width: 310px;
+          margin: 10px;
+          height: auto;
+          border-radius: 7px;
+          text-align: center;
+          // background-color: #f3f3f3;
+          // box-shadow: 0 0 6px 2px #b0b2ab;
+          padding-bottom: 3px;
+      }
+        .image{
+          max-width: 100%;
+        	height: auto;
+        }
+          .price{
+            color: red;
+              font-family: "brandon-grotesque";
+          }
+            .title{
+              font-family: "brandon-grotesque";
+              text-transform: uppercase;
+              font-weight: bold;
+                      }
+              .description{
+                text-transform: capitalize;
+              }
 
-#container{
-  font-family: "brandon-grotesque";
-  padding-top: 10px;
-  margin: auto;
-  width: 100%;
-  // background-color: blue;
-  display: flex; // flexbox learn more
-  align-items: center; // vertically and horizontally alighs each
-  flex-wrap: wrap; //makes them responsive
-}
 
 .show{
-    font-family: "brandon-grotesque";
+  font-family: "brandon-grotesque";
 }
+
+
 .edit{
-    font-family: "brandon-grotesque";
+  font-family: "brandon-grotesque";
+  align-items: center;
+  margin: auto;
+  width: 60%;
 }
-
-.product_wrapper{
-    font-family: "brandon-grotesque";
-    width: 300px;
-    margin: 10px;
-    height: auto;
-    border-radius: 5px;
+  .form{
     text-align: center;
-    background-color: #f3f3f3;
-    box-shadow: 0 0 6px 2px #b0b2ab;
-    padding-bottom: 3px;
-}
-
-
-.image{
-  border-radius: 5px;
-
-}
-
-.price{
-  color: red;
-    font-family: "brandon-grotesque";
-}
-
-.title{
-    font-family: "brandon-grotesque";
-  text-transform: uppercase;
-  font-weight: bold;
-
-}
-
-.description{
-  text-transform: capitalize;
-
-}
-
-.form{
-  text-align: center;
-}
+  }
 
 #back_button{
   text-align: center;

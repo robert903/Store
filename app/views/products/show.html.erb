@@ -1,23 +1,34 @@
-<div class="show">
+<div class=" col-md-5 col-md-offset-3">
+<div class="show panel panel-default">
 
 <p id="notice"><%= notice %></p>
 
-<p> <%=image_tag @product.image.url(:large) %> </p>
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<p class="panel-heading"> <%=image_tag @product.image.url(:large) %> </p>
+<div class="panel-body">
+      <p>
+        <strong>Title:</strong>
+        <%= @product.title %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+      <p>
+        <strong>Price:</strong>
+        $<%= @product.price %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-<p>
-  <strong>Price:</strong>
-  $<%= @product.price %>
-</p>
+
+<div class="btn-group pull-right">
+  <%= link_to like_product_path(@product), method: :put, class: "btn btn-default" do%>
+  <span class="glyphicon glyphicon-heart"></span>
+  <%= @product.get_upvotes.size %>
+<% end %>
   <% if user_signed_in? %>
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', root_path%>
+<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %>
+<%= link_to 'Back', root_path,  class:"btn btn-default"%>
  <% end %>
+ </div>
+ </div>
+</div>
 </div>

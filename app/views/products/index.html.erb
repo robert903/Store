@@ -1,18 +1,26 @@
-<html class="body">
-  <h1>Welcome to the Cat store</h1>
-    <div id="container">
-      <% @products.each do |product| %>
-        <br>
-          <div class="product_wrapper"
-            <p class="image"> <%=image_tag product.image.url(:medium) %> </p>
-            <h2 class="title"><%= link_to product.title, product %> </h2>
-            <p class="description"><%= truncate product.description, length: 160  %></p> <!--  This cuts the maximum characters allowed in description to 160 -->
-            <p class="price">$<%= product.price %></p>
-              <% if user_signed_in? %>
-            <%= link_to 'Edit', edit_product_path(product) %> |
-            <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%end %>
-          </div>
-      <%end%>
+<html>
+  <div class="body">
+    <h1 class="jumbotron">Welcome to Cattopia Cat Auctions</h1>
+      <div class="box products transitions-enabled">
+        <% @products.each do |product| %>
+          <br>
+            <div class="product_wrapper panel panel-default"
+              <p class="image"> <%=image_tag product.image.url(:medium) %> </p>
+              <div class="panel-body">
+                <h2 class="title"><%= link_to product.title, product %> </h2>
+                <p class="description"><%= truncate product.description, length: 160  %></p> <!--  This cuts the maximum characters allowed in description to 160 -->
+                <p class="price">$<%= product.price %></p>
+                <%= link_to like_product_path(product), method: :put, class: "btn btn-default" do%>
+                <span class="glyphicon glyphicon-heart"></span>
+                <%= product.get_upvotes.size %>
+              <% end %>
+                  <% if user_signed_in? %>
+                <%= link_to 'Edit', edit_product_path(product), class:"btn btn-default" %>
+                <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default" %>
+                <%end %>
+              </div>
+            </div>
+        <%end%>
+      </div>
     </div>
 </html>

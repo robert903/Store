@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'users/profile'
 
   devise_for :users
-  resources :products
+  resources :products do
+    member do
+    put "like", to: "products#upvote"
+    end
+  end
 
  root 'products#index'
 
