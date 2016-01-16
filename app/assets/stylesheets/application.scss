@@ -5,7 +5,7 @@
 @import "bootstrap";
 @font-face {
   font-family: "brandon-grotesque";
-  src: url(/assets/brandon.otf) format("truetype");
+  src: asset-url('brandon.otf') format("truetype");
 }
 
 .glyphicon-heart{
