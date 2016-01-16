@@ -52,9 +52,7 @@ group :development do
 
   gem 'sqlite3'
 
-  gem 'rails_12factor', group: :production
+end
+gem 'rails_12factor', group: :production
 
-end
-group :production do
-  gem 'pg'
-end
+gem 'pg', '~> 0.18.4', group: :production
