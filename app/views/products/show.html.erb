@@ -26,6 +26,7 @@
 <% end %>
   <% if user_signed_in? %>
 <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %>
+<%= link_to 'Kill', @product, method: :delete, data: { confirm: 'Murder This Poor Cat??' }, class:"btn btn-default" %>
 <%= link_to 'Back', root_path,  class:"btn btn-default"%>
  <% end %>
  </div>
